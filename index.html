@@ -1,0 +1,468 @@
+<<<<<<< HEAD
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nudos — Universidad de Guadalajara</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="https://www.udg.mx/sites/default/files/favicon.ico" />
+  <meta name="description" content="Proyecto académico sobre nudos — Universidad de Guadalajara. Historia, teoría y simbolismo de los nudos.">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-grid">
+      <a class="brand" href="index.html" aria-label="Universidad de Guadalajara - Nudos">
+        <img src="img/logo.png" alt="Logotipo Universidad de Guadalajara" class="logo">
+
+        <div class="brand-text">
+          <h1>Universidad de Guadalajara</h1>
+          <p class="subtitle">Proyecto: Nudos — Departamento de Matemáticas</p>
+        </div>
+      </a>
+
+      <button id="btn-menu" class="btn-menu" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="teoria.html">Teoría</a></li>
+          <li><a href="simbolismo.html">Simbolismo</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero con imagen pública (Unsplash query para "knot rope") -->
+    <section class="hero" style="background-image: url('https://source.unsplash.com/1600x900/?knot,rope,ancient');">
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h2>Los nudos: entre la historia, el arte y la matemática</h2>
+          <p class="lead">Explora definiciones, clasificaciones y el rico simbolismo cultural de los nudos — recurso educativo preparado por la Universidad de Guadalajara.</p>
+          <div class="hero-ctas">
+            <a class="btn-primary" href="teoria.html">Ir a la teoría</a>
+            <a class="btn-outline" href="historia.html">Leer la historia</a>
+          </div>
+        </div>
+
+        <figure class="hero-figure" aria-hidden="true">
+          <!-- imagen decorativa complementaria -->
+          <img src="https://source.unsplash.com/600x480/?knots,rope" alt="">
+        </figure>
+      </div>
+    </section>
+
+    <section class="container intro-cards">
+      <article class="card card-weak">
+        <h3>Definición</h3>
+        <p>Un nudo es una incrustación de un círculo en el espacio tridimensional; la teoría de nudos estudia cómo se deforman sin cortar ni pegar y cómo se clasifican.</p>
+      </article>
+
+      <article class="card">
+        <h3>Historia</h3>
+        <p>Del quipu andino al nudo de Isis egipcio: los nudos tuvieron usos administrativos, rituales y simbólicos a lo largo de la historia.</p>
+      </article>
+
+      <article class="card">
+        <h3>Aplicaciones</h3>
+        <p>Desde la biología molecular hasta la ciencia de materiales —los nudos inspiran investigación y soluciones concretas.</p>
+      </article>
+    </section>
+
+    <section class="container features">
+      <h3 class="section-title">Contenido</h3>
+      <div class="features-grid">
+        <div class="feature reveal">
+          <h4>Teoría</h4>
+          <p>Conceptos clave: nudo trivial, nudo trébol, movimientos de Reidemeister y clasificación.</p>
+        </div>
+        <div class="feature reveal delay-1">
+          <h4>Historia</h4>
+          <p>Quipus, nudos celtas, chinos y marineros, con ejemplos y contexto cultural.</p>
+        </div>
+        <div class="feature reveal delay-2">
+          <h4>Simbolismo</h4>
+          <p>Significados rituales, funerarios, protectores y de unión presentes en diversas culturas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container quote">
+      <blockquote>
+        «Los nudos son pequeños laboratorios de geometría y cultura: simples en apariencia, infinitos en significado.»
+        <cite>— Colección UDG, Departamento de Matemáticas</cite>
+      </blockquote>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <strong>Universidad de Guadalajara</strong><br>
+        Departamento de Matemáticas — Proyecto: Nudos
+      </div>
+      <div class="footer-right">
+        <small>Material compilado para fines educativos.</small>
+        <nav aria-label="Enlaces de pie">
+          <a href="contacto.html">Contacto</a>
+          <a href="historia.html">Historia</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+=======
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teoría de Nudos</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/styles.css" rel="stylesheet">
+
+  <meta name="description" content="Teoría de Nudos — definiciones, historia, clasificación y aplicaciones.">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Teoría de Nudos</a>
+
+    <!-- Botón hamburguesa -->
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navMain" 
+      aria-controls="navMain" 
+      aria-expanded="false" 
+      aria-label="Menú de navegación"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Enlaces del menú -->
+    <div class="collapse navbar-collapse justify-content-end" id="navMain">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tipos">Tipos y Clasificación</a></li>
+        <li class="nav-item"><a class="nav-link" href="#equivalencia">Equivalencia</a></li>
+        <li class="nav-item"><a class="nav-link" href="#aplicaciones">Aplicaciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="#investigacion">Investigación</a></li>
+        <li class="nav-item"><a class="nav-link" href="#fico">Biografía</a></li>
+        <li class="nav-item"><a class="nav-link" href="#bibliografia">Bibliografía</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- HERO -->
+  <header id="inicio" class="hero-section">
+    <div class="container text-center" data-aos="fade" data-aos-duration="1000">
+      <h1 class="hero-title">Teoría de Nudos</h1>
+      <p class="lead hero-sub">Definiciones, historia, clasificación y aplicaciones — contenido original.</p>
+      <a class="btn btn-primary btn-lg" href="#tipos">Explorar conceptos</a>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- Definición -->
+    <section id="definicion" class="section section-pad" data-aos="fade" data-aos-duration="1000">
+      <div class="container">
+        <h2 class="section-heading">Definición rigurosa</h2>
+        <p>En matemáticas, un nudo se define como una incrustación de un círculo en el espacio tridimensional. La teoría de nudos estudia las propiedades topológicas de estas estructuras, tales como sus deformaciones y clasificaciones.</p>
+      </div>
+    </section>
+
+    <!-- Nudo trivial y de trébol -->
+    <section id="historia" class="section section-alt section-pad" data-aos="fade" data-aos-duration="1000">
+      <div class="container">
+        <h2 class="section-heading">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modalNudoTrivial" style="text-decoration:none; color:inherit; cursor:pointer;">
+            Nudo Trivial y de trébol 🔍
+          </a>
+        </h2>
+        <p>En el estudio y clasificación de los nudos, es fundamental considerarlos como lazos cerrados, ya que esto permite manipularlos sin que se deshagan ni pierdan sus propiedades topológicas.</p>
+        <p>Aunque parezca contradictorio, el nudo más simple, llamado nudo trivial, es una simple circunferencia sin entrelazamientos. Este es el punto de partida en la teoría de nudos. Por otro lado, el nudo trébol es el único nudo existente con tres cruces y es muy conocido porque, probablemente, fue el primer nudo que aprendimos a hacer de forma intuitiva.</p>
+      </div>
+    </section>
+
+    <!-- Modal del Nudo de Trébol -->
+    <div class="modal fade" id="modalNudoTrivial" tabindex="-1" aria-labelledby="modalNudoTrivialLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalNudoTrivialLabel">Nudo de Trébol</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="img/trebol.png" alt="Nudo de Trébol" class="img-fluid rounded shadow">
+            <p class="mt-3">
+              El <strong>nudo de trébol</strong> es el nudo no trivial más simple en la teoría de nudos. 
+              Posee tres cruces y no puede deshacerse sin cortar la cuerda. Es el primer ejemplo 
+              de un nudo verdaderamente entrelazado y se representa comúnmente como <em>3₁</em>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enlaces de nudos -->
+<section id="tipos" class="section section-pad" data-aos="fade" data-aos-duration="1000">
+  <div class="container">
+    <h2 class="section-heading">
+      <a href="#" data-bs-toggle="modal" data-bs-target="#modalEnlacesNudos" style="text-decoration:none; color:inherit; cursor:pointer;">
+        Enlaces de nudos 🔍
+      </a>
+    </h2>
+    <p>Una vez que entendemos los nudos como circunferencias cerradas, es posible ampliar el concepto hacia los enlaces de nudos. Un enlace de nudos se forma cuando dos o más nudos se entrelazan entre sí sin fusionarse; por ejemplo, una cadena es un enlace de nudos triviales.</p>
+
+    <h3 class="mt-4">
+      <a href="#" data-bs-toggle="modal" data-bs-target="#modalNudoConjugado" style="text-decoration:none; color:inherit; cursor:pointer;">
+        Nudo Conjugado y Primo 🔍
+      </a>
+    </h3>
+    <p>Un nudo conjugado se obtiene al unir dos o más nudos mediante un corte y posterior unión de sus extremos, formando así una estructura más compleja. En contraste, un nudo primo no puede dividirse en nudos más simples.</p>
+
+    <h3 class="mt-4">
+      <a href="#" data-bs-toggle="modal" data-bs-target="#modalNudosToroidales" style="text-decoration:none; color:inherit; cursor:pointer;">
+        Nudos Toroidales 🔍
+      </a>
+    </h3>
+    <p>Los nudos toroidales se describen como curvas trazadas sobre la superficie de un toro, y su estudio combina geometría y álgebra.</p>
+
+    <h3 class="mt-4">
+      <a href="#" data-bs-toggle="modal" data-bs-target="#modalClasificacion" style="text-decoration:none; color:inherit; cursor:pointer;">
+        Clasificación de Nudos 🔍
+      </a>
+    </h3>
+    <p>La primera clasificación de nudos fue hecha por Guthrie Tait, quien llegó a catalogar cientos de nudos con diferentes números de cruces. Hoy se han clasificado más de 352 millones de nudos con hasta 19 cruces, reflejando la enorme complejidad de esta área de la topología.</p>
+  </div>
+</section>
+
+<!-- Modal Enlaces de Nudos -->
+<div class="modal fade" id="modalEnlacesNudos" tabindex="-1" aria-labelledby="modalEnlacesNudosLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEnlacesNudosLabel">Enlaces de Nudos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/enlaces.png" alt="Enlaces de Nudos" class="img-fluid rounded shadow">
+        <p class="mt-3">
+          Un <strong>enlace de nudos</strong> se forma cuando dos o más nudos se entrelazan entre sí sin fusionarse. 
+          Estos enlaces permiten estudiar la interacción entre diferentes nudos y sus propiedades topológicas. 
+          Por ejemplo, una cadena puede considerarse un enlace de nudos triviales. 
+          Los enlaces son fundamentales para comprender estructuras más complejas en la teoría de nudos.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Nudo Conjugado y Primo -->
+<div class="modal fade" id="modalNudoConjugado" tabindex="-1" aria-labelledby="modalNudoConjugadoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalNudoConjugadoLabel">Nudo Conjugado y Primo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/conjugado.png" alt="Nudo Conjugado y Primo" class="img-fluid rounded shadow">
+        <p class="mt-3">
+          Los <strong>nudos conjugado y primo</strong> son conceptos clave en la teoría de nudos. Un nudo conjugado se forma al unir dos o más nudos, mientras que un nudo primo no puede dividirse en otros más simples.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Nudos Toroidales -->
+<div class="modal fade" id="modalNudosToroidales" tabindex="-1" aria-labelledby="modalNudosToroidalesLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalNudosToroidalesLabel">Nudos Toroidales</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/conjugado.png" alt="Nudos Toroidales" class="img-fluid rounded shadow">
+        <p class="mt-3">
+          Los <strong>nudos toroidales</strong> se forman al trazar una curva cerrada sobre la superficie de un toro.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Clasificación de Nudos -->
+<div class="modal fade" id="modalClasificacion" tabindex="-1" aria-labelledby="modalClasificacionLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalClasificacionLabel">Clasificación de Nudos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/trebol.png" alt="Clasificación de Nudos" class="img-fluid rounded shadow">
+        <p class="mt-3">
+          Guthrie Tait fue pionero en clasificar nudos. Hoy se conocen más de 352 millones de nudos con hasta 19 cruces.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Equivalencia -->
+    <section id="equivalencia" class="section section-alt section-pad" data-aos="fade" data-aos-duration="1000">
+      <div class="container">
+        <h2 class="section-heading">El gran problema de la equivalencia</h2>
+        <p>Uno de los grandes desafíos en la clasificación de nudos es determinar cuándo dos nudos son realmente distintos. A través de simples transformaciones, un diagrama de un nudo puede adoptar formas visualmente muy diferentes, lo que complica su identificación.</p>
+      </div>
+    </section>
+
+    <!-- Aplicaciones -->
+    <section id="aplicaciones" class="section section-pad" data-aos="fade" data-aos-duration="1000">
+      <div class="container">
+        <h2 class="section-heading">Impacto en la historia</h2>
+        <p>A lo largo de los siglos se han usado nudos en múltiples culturas: el nudo Gordiano, los nudos celtas, los quipus incas, el nudo de Isis en Egipto, los nudos chinos y la figura católica de la Virgen Desatanudos.</p>
+
+        <h3 class="mt-4">Nudos Diminutos</h3>
+        <p>En el interior de nuestras células y en la corriente sanguínea existen estructuras que, sorprendentemente,
+        adoptan formas de nudos. El ADN, portador de toda la información genética,se comporta como un nudo
+        diminuto, con enredos y cruces que son clave para su funcionamiento. Estos nudos moleculares no solo reflejan
+        nuestra constitución física, sino que también influyen en procesos como la replicación y la expresión genética.</p>
+
+        <h3 class="mt-4">Movimientos de Reidemeister</h3>
+        <p>En 1927, Kurt Reidemeister introdujo su teorema, que establece que cualquier par de diagramas de un mismo nudo pueden relacionarse mediante tres movimientos básicos.</p>
+      </div>
+    </section>
+
+    <!-- Investigación -->
+    <section id="investigacion" class="section section-pad" data-aos="fade" data-aos-duration="1000">
+      <div class="container">
+        <h2 class="section-heading">El nudo más apretado del mundo</h2>
+        <p>En laboratorios, científicos han creado nudos moleculares tan delgados que miden solo 68 átomos de grosor, unas 200,000 veces más finos que un cabello humano.</p>
+      </div>
+    </section>
+
+    <!-- Biografía -->
+    <section id="fico" class="section section-alt section-pad" data-aos="fade" data-aos-duration="1000">
+  <div class="container">
+    <h2 class="section-heading">
+      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFico" style="text-decoration:none; color:inherit; cursor:pointer;">
+        FICO 🔍
+      </a>
+    </h2>
+    <p>Francisco Xavier “Fico” González Acuña fue un destacado matemático mexicano, pionero de la teoría de nudos en México y América Latina.</p>
+  </div>
+</section>
+<!-- Modal FICO -->
+<div class="modal fade" id="modalFico" tabindex="-1" aria-labelledby="modalFicoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFicoLabel">Francisco Xavier “Fico” González Acuña</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/fico.png" alt="FICO" class="img-fluid rounded shadow">
+        <p class="mt-3">
+          Francisco Xavier “Fico” González Acuña fue un matemático mexicano reconocido por su trabajo en teoría de nudos. 
+          Pionero en México y América Latina, dedicó su vida a estudiar las estructuras tridimensionales y formó a generaciones de matemáticos, dejando un legado académico duradero.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Bibliografía -->
+    <section id="bibliografia" class="section section-pad" data-aos="fade" data-aos-duration="1000">
+      <div class="container">
+        <h2 class="section-heading">Bibliografía</h2>
+        <ul class="biblio">
+          <li>Adams, C. C. (2004). The Knot Book. American Mathematical Society.</li>
+          <li>Lickorish, W. B. R. (1997). An Introduction to Knot Theory. Springer-Verlag.</li>
+          <li>Livingston, C. (1993). Knot Theory. The Mathematical Association of America.</li>
+          <li>Rolfsen, D. (1976). Knots and Links. Publish or Perish.</li>
+          <li>Kauffman, L. H. (2001). Knots and Physics. World Scientific.</li>
+          <li>Albanés, J. J. M., Nieto, J. G. R., & Díaz, O. P. S. (2016). Introduction to Knot Theory. Revista de Ciencias, 20(2).</li>
+          <li>Crowell, R. H., & Fox, R. H. (2012). Introduction to Knot Theory. Springer Science & Business Media.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section section-pad contact-section" data-aos="fade" data-aos-duration="1000">
+      <div class="container text-center">
+        <h2 class="section-heading">Contacto</h2>
+        <p>¿Quieres comentar o colaborar? Escríbeme por WhatsApp.</p>
+        <a class="btn btn-success" href="https://wa.me/5213334753114" target="_blank" rel="noopener">Abrir WhatsApp</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p>&copy; <span id="year"></span> Teoría de Nudos. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/5213334753114" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="white" aria-hidden="true">
+      <path d="M20.52 3.48A11.92 11.92 0 0012 0C5.37 0 .1 5.27.1 11.9c0 2.1.55 4.16 1.6 5.98L0 24l6.35-1.66A11.86 11.86 0 0012 23.8c6.63 0 11.9-5.27 11.9-11.9 0-3.18-1.24-6.17-3.38-8.42zM12 21.81c-1.35 0-2.68-.35-3.84-1.01l-.27-.16-3.77.99.99-3.68-.17-.28A8.01 8.01 0 013.99 11.9C3.99 7.26 7.36 3.9 12 3.9c4.63 0 8 3.36 8 7.99 0 4.63-3.37 7.92-8 7.92zM17.1 14.74c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.2-.44-2.28-1.4-.84-.75-1.4-1.67-1.56-1.95-.16-.28-.02-.43.12-.57.12-.12.28-.32.42-.48.14-.16.19-.28.28-.46.09-.18.05-.35-.02-.49-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.62-.47-.16-.01-.35-.01-.54-.01s-.49.08-.75.35c-.26.27-1 1-1 2.44 0 1.44 1.03 2.84 1.18 3.04.15.2 2.03 3.1 4.92 4.26 2.16.9 2.98.99 3.22.92.25-.07 1.61-.66 1.84-1.24.23-.58.23-1.08.16-1.24-.07-.16-.25-.27-.53-.41z"/>
+    </svg>
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+
+  <script>
+    AOS.init();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
+>>>>>>> 8e924208bf1f54441688061845370aedabad021b
