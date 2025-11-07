@@ -6,48 +6,42 @@ function activarBotonImagen(botonId, boxId, textoMostrar, textoOcultar) {
   if (!btn || !box) return;
 
   btn.addEventListener("click", () => {
-    box.hidden = !box.hidden;
-    btn.textContent = box.hidden ? textoMostrar : textoOcultar;
+    const visible = !box.hidden;
+    box.hidden = visible;
+    btn.textContent = visible ? textoMostrar : textoOcultar;
   });
 }
 
 // --- Control del menú hamburguesa + activación de botones ---
 document.addEventListener("DOMContentLoaded", () => {
-
   const hambBtn = document.getElementById("hambBtn");
   const overlay = document.getElementById("overlay");
   const overlayBg = document.getElementById("overlayBg");
 
-  // --- MENU HAMBURGUESA ---
+  // --- MENÚ HAMBURGUESA ---
   if (hambBtn && overlay) {
     hambBtn.addEventListener("click", () => {
       const expanded = hambBtn.getAttribute("aria-expanded") === "true";
-      hambBtn.setAttribute("aria-expanded", String(!expanded));
-      overlay.style.display = !expanded ? "flex" : "none";
-      overlay.setAttribute("aria-hidden", String(expanded));
+      const newState = !expanded;
 
-      // alternar clase "active" para mostrar la X
-      hambBtn.classList.toggle("active", !expanded);
+      hambBtn.setAttribute("aria-expanded", String(newState));
+      hambBtn.classList.toggle("active", newState);
+      overlay.style.display = newState ? "flex" : "none";
+      overlay.setAttribute("aria-hidden", String(!newState));
     });
   }
 
   // --- Cerrar al tocar fondo oscuro ---
   if (overlayBg && hambBtn && overlay) {
     overlayBg.addEventListener("click", () => {
-      overlay.style.display = "none";
-      hambBtn.setAttribute("aria-expanded", "false");
-      overlay.setAttribute("aria-hidden", "true");
-      hambBtn.classList.remove("active");
+      cerrarMenu(hambBtn, overlay);
     });
   }
 
   // --- Cerrar con tecla Escape ---
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && hambBtn && overlay) {
-      overlay.style.display = "none";
-      hambBtn.setAttribute("aria-expanded", "false");
-      overlay.setAttribute("aria-hidden", "true");
-      hambBtn.classList.remove("active");
+      cerrarMenu(hambBtn, overlay);
     }
   });
 
@@ -87,16 +81,22 @@ document.addEventListener("DOMContentLoaded", () => {
     "Ocultar imagen"
   );
 
-  // --- EFECTO ZOOM SEGURO ---
-  document.querySelectorAll(".img-box img").forEach(img => {
-    img.addEventListener("mousemove", e => {
+  // --- EFECTO ZOOM (opcional y seguro) ---
+  document.querySelectorAll(".img-box img").forEach((img) => {
+    img.addEventListener("mousemove", (e) => {
       const rect = img.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width) * 100 + "%";
       const y = ((e.clientY - rect.top) / rect.height) * 100 + "%";
-
       img.style.setProperty("--x", x);
       img.style.setProperty("--y", y);
     });
   });
-
 });
+
+// --- Función auxiliar para cerrar el menú ---
+function cerrarMenu(hambBtn, overlay) {
+  overlay.style.display = "none";
+  overlay.setAttribute("aria-hidden", "true");
+  hambBtn.setAttribute("aria-expanded", "false");
+  hambBtn.classList.remove("active");
+}
