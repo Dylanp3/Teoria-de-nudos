@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("overlay");
   const overlayBg = document.getElementById("overlayBg");
 
+  // --- MENU HAMBURGUESA ---
   if (hambBtn && overlay) {
-    // Abrir / cerrar menú
     hambBtn.addEventListener("click", () => {
       const expanded = hambBtn.getAttribute("aria-expanded") === "true";
       hambBtn.setAttribute("aria-expanded", String(!expanded));
@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Cerrar haciendo clic en el fondo
   if (overlayBg && hambBtn && overlay) {
     overlayBg.addEventListener("click", () => {
       overlay.style.display = "none";
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Cerrar con ESC
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && hambBtn && overlay) {
       overlay.style.display = "none";
@@ -46,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // --- Activar botones de imágenes (Fico, Reidemeister, ADN, Equivalencia) ---
+  // --- BOTONES DE IMÁGENES ---
   activarBotonImagen(
     "btnFico",
     "ficoBox",
@@ -74,21 +72,24 @@ document.addEventListener("DOMContentLoaded", () => {
     "Mostrar imagen del problema de equivalencia",
     "Ocultar imagen"
   );
-});
-// --- Efecto zoom que sigue al cursor ---
-document.querySelectorAll(".img-box img").forEach(img => {
-  img.addEventListener("mousemove", e => {
-    const rect = img.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100 + "%";
-    const y = ((e.clientY - rect.top) / rect.height) * 100 + "%";
 
-    img.style.setProperty("--x", x);
-    img.style.setProperty("--y", y);
+  activarBotonImagen(
+    "btnClasif",
+    "clasifBox",
+    "Mostrar imagen de la clasificación de nudos",
+    "Ocultar imagen"
+  );
+
+  // --- EFECTO ZOOM SEGURO ---
+  document.querySelectorAll(".img-box img").forEach(img => {
+    img.addEventListener("mousemove", e => {
+      const rect = img.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100 + "%";
+      const y = ((e.clientY - rect.top) / rect.height) * 100 + "%";
+
+      img.style.setProperty("--x", x);
+      img.style.setProperty("--y", y);
+    });
   });
+
 });
-activarBotonImagen(
-  "btnClasif",
-  "clasifBox",
-  "Mostrar imagen de la clasificación de nudos",
-  "Ocultar imagen"
-);
