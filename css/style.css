@@ -1,6 +1,6 @@
 :root {
   --udg-blue: #002855;
-  --udg-orange: #d16a1d;      /* Naranja institucional */
+  --udg-orange: #d16a1d;
   --grey-light: #f2f2f2;
   --grey-border: #d5d5d5;
   --max-width: 1200px;
@@ -20,7 +20,7 @@ html, body {
   padding: 0 16px;
 }
 
-/* --- ENCABEZADO INSTITUCIONAL (Optimizado) --- */
+/* --- ENCABEZADO INSTITUCIONAL OPTIMIZADO --- */
 header {
   background: white;
   padding: 14px 0;
@@ -29,14 +29,13 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  flex-wrap: nowrap;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  min-width: 0; /* evita que empuje el layout */
+  gap: 12px;
+  flex-shrink: 1;
 }
 
 .brand .logo img {
@@ -70,109 +69,41 @@ nav a {
   text-decoration: none;
   font-weight: 600;
   padding: 6px 10px;
-  white-space: nowrap;
 }
 
 nav a:hover {
   color: var(--udg-orange);
 }
 
-/* --- Botón hamburguesa --- */
+/* --- BOTÓN HAMBURGUESA --- */
 .hamburger {
   display: none;
   background: transparent;
   border: 0;
-  padding: 6px;
   cursor: pointer;
+  padding: 6px;
 }
 
 .hamburger .bar {
-  width: 26px;
-  height: 3px;
-  background: var(--udg-blue);
-  margin: 5px 0;
-  border-radius: 3px;
-}
-
-
-/* --- BARRA NARANJA INSTITUCIONAL / HERO --- */
-.hero {
-  background: var(--udg-orange);
-  padding: 26px;
-  color: white;
-  margin-top: 0;
-  border-radius: 0;
-  box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.05);
-}
-
-.hero h1 {
-  margin: 0;
-  font-size: 26px;
-  font-weight: 700;
-  color: white;
-}
-
-.lead {
-  margin-top: 8px;
-  color: #fffde8;
-}
-
-/* --- SECCIONES DE CONTENIDO --- */
-section {
-  background: white;
-  padding: 26px;
-  margin: 26px 0;
-  border: 1px solid var(--grey-border);
-  border-radius: 6px;
-}
-
-section h2 {
-  color: var(--udg-blue);
-  border-bottom: 2px solid var(--udg-orange);
-  padding-bottom: 6px;
-}
-
-/* --- LISTAS Y ENLACES --- */
-ul li a {
-  color: var(--udg-blue);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-ul li a:hover {
-  color: var(--udg-orange);
-}
-
-/* --- ASIDE (por si lo usas después) --- */
-aside.card {
-  border: 1px solid var(--grey-border);
-  background: var(--grey-light);
-  padding: 16px;
-  border-radius: 5px;
-}
-
-/* --- MENÚ HAMBURGUESA MÓVIL --- */
-.hamburger {
-  display: none;
-  background: transparent;
-  border: 0;
-  padding: 8px;
-}
-
-.hamburger .bar {
-  width: 22px;
+  width: 24px;
   height: 3px;
   background: var(--udg-blue);
   margin: 4px 0;
+  border-radius: 2px;
 }
 
-/* --- OVERLAY MENÚ MÓVIL --- */
+/* --- MENÚ MÓVIL OVERLAY --- */
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.3);
-  display: none;
+  background: rgba(0,0,0,0.35);
   z-index: 200;
+  display: none;
+}
+
+.overlay-bg {
+  position: absolute;
+  inset: 0;
 }
 
 .overlay-panel {
@@ -194,17 +125,66 @@ aside.card {
   text-decoration: none;
 }
 
-/* --- FOOTER --- */
-footer {
-  background: white;
-  padding: 16px;
-  border-top: 1px solid var(--grey-border);
-  color: #666;
-  font-size: 13px;
-  text-align: center;
+.overlay-panel a:hover {
+  color: var(--udg-orange);
 }
 
-/* --- BOTONES E IMÁGENES (GENÉRICOS PARA CUALQUIER SECCIÓN) --- */
+/* --- HERO --- */
+.hero {
+  background: var(--udg-orange);
+  padding: 26px;
+  color: white;
+  margin-top: 0;
+  box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.05);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+}
+
+.lead {
+  margin-top: 8px;
+  color: #fffde8;
+}
+
+/* --- SECCIONES --- */
+section {
+  background: white;
+  padding: 26px;
+  margin: 26px 0;
+  border: 1px solid var(--grey-border);
+  border-radius: 6px;
+}
+
+section h2 {
+  color: var(--udg-blue);
+  border-bottom: 2px solid var(--udg-orange);
+  padding-bottom: 6px;
+}
+
+/* --- ENLACES --- */
+ul li a {
+  color: var(--udg-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+ul li a:hover {
+  color: var(--udg-orange);
+}
+
+/* --- ASIDE --- */
+aside.card {
+  border: 1px solid var(--grey-border);
+  background: var(--grey-light);
+  padding: 16px;
+  border-radius: 5px;
+}
+
+/* --- BOTONES E IMÁGENES --- */
 .img-container {
   margin-top: 20px;
 }
@@ -234,22 +214,13 @@ footer {
   text-align: center;
 }
 
-.img-box img {
+img-box img {
   max-width: 100%;
   height: auto;
   border-radius: 6px;
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-  nav {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-  }
-}
-/* --- ZOOM suave al pasar el cursor sobre las imágenes --- */
+/* --- ZOOM SUAVE --- */
 .img-box img {
   transition: transform 0.25s ease;
   cursor: zoom-in;
@@ -257,4 +228,28 @@ footer {
 
 .img-box img:hover {
   transform: scale(1.08);
+}
+
+/* --- OCULTAR ELEMENTOS HIDDEN REALMENTE --- */
+[hidden] {
+  display: none !important;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  nav {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: block !important;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  .site-title {
+    font-size: 15px;
+  }
 }
