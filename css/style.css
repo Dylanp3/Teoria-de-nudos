@@ -20,7 +20,7 @@ html, body {
   padding: 0 16px;
 }
 
-/* --- ENCABEZADO INSTITUCIONAL --- */
+/* --- ENCABEZADO INSTITUCIONAL (Optimizado) --- */
 header {
   background: white;
   padding: 14px 0;
@@ -28,35 +28,72 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+  flex-wrap: nowrap;
 }
 
 .brand {
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 0; /* evita que empuje el layout */
+}
+
+.brand .logo img {
+  width: 60px;
+  height: auto;
+  border-radius: 8px;
 }
 
 .site-title {
   font-size: 17px;
   font-weight: 700;
   color: var(--udg-blue);
+  white-space: nowrap;
 }
 
 .muted {
   font-size: 13px;
   color: #666;
+  white-space: nowrap;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 nav a {
   color: #444;
   text-decoration: none;
   font-weight: 600;
-  padding: 8px 12px;
+  padding: 6px 10px;
+  white-space: nowrap;
 }
 
 nav a:hover {
   color: var(--udg-orange);
 }
+
+/* --- Botón hamburguesa --- */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 26px;
+  height: 3px;
+  background: var(--udg-blue);
+  margin: 5px 0;
+  border-radius: 3px;
+}
+
 
 /* --- BARRA NARANJA INSTITUCIONAL / HERO --- */
 .hero {
