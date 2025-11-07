@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Departamento de Matemáticas — Universidad de Guadalajara</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+       <div class="logo"><img src="img/logo.png" alt="Logo UDG" style="width:60px;height:auto;border-radius:8px;"></div>
+        <div>
+          <div class="site-title">Departamento de Matemáticas — Universidad de Guadalajara</div>
+          <div class="muted">Portal institucional</div>
+        </div>
+      </div>
+
+      <nav aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="historia.html">Historia</a>
+        <a href="conceptos.html">Conceptos</a>
+        <a href="bibliografia.html">Bibliografía</a>
+      </nav>
+
+      <button class="hamburger" id="hambBtn" aria-label="Abrir menú" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </header>
+
+    <!-- Menú móvil -->
+    <div class="overlay" id="overlay" aria-hidden="true">
+      <div class="overlay-bg" id="overlayBg"></div>
+      <aside class="overlay-panel" role="dialog" aria-modal="true">
+        <h3>Menú</h3>
+        <a href="index.html">Inicio</a>
+        <a href="historia.html">Historia</a>
+        <a href="conceptos.html">Conceptos</a>
+        <a href="bibliografia.html">Bibliografía</a>
+      </aside>
+    </div>
+
+    <main>
+      <section class="hero">
+        <h1>Departamento de Matemáticas — Universidad de Guadalajara</h1>
+        <p class="lead">Página institucional dedicada a la difusión académica y cultural de la teoría de nudos, basada en documentos oficiales del Departamento de Matemáticas.</p>
+      </section>
+
+      <section>
+        <h2>Definición</h2>
+        <p>En matemáticas un nudo se define como un subconjunto del espacio tridimensional que es homeomorfo a un círculo. Se puede comprender como una incrustación de un círculo en el espacio tridimensional. La teoría de nudos estudia las propiedades topológicas de estas estructuras, tales como sus deformaciones y clasificaciones.</p>
+        <p>La teoría de nudos busca describir de forma rigurosa cómo pueden deformarse los nudos sin cortarse ni pegarse, y cómo clasificarlos de manera sistemática.</p>
+      </section>
+
+      <section>
+        <h2>Propósito institucional</h2>
+        <p>El Departamento de Matemáticas de la Universidad de Guadalajara promueve la enseñanza, divulgación e investigación de las matemáticas aplicadas y puras. Este documento web refleja el compromiso académico con la exactitud, la historia y la exploración de conceptos topológicos como los nudos.</p>
+      </section>
+
+      <section>
+        <h2>Explora más</h2>
+        <ul>
+          <li><a href="historia.html">Historia de los nudos y su simbolismo</a></li>
+          <li><a href="conceptos.html">Clasificación y teoría de nudos</a></li>
+          <li><a href="bibliografia.html">Referencias académicas</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="muted">© Universidad de Guadalajara — Departamento de Matemáticas</div>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

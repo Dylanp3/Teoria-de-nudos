@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conceptos — Departamento de Matemáticas UDG</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="img/logo.png" alt="Logo UDG" style="width:60px;height:auto;border-radius:8px;"></div>
+        <div>
+          <div class="site-title">Departamento de Matemáticas — Universidad de Guadalajara</div>
+          <div class="muted">Portal institucional</div>
+        </div>
+      </div>
+
+      <nav aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="historia.html">Historia</a>
+        <a href="conceptos.html" class="active">Conceptos</a>
+        <a href="bibliografia.html">Bibliografía</a>
+      </nav>
+
+      <button class="hamburger" id="hambBtn" aria-label="Abrir menú" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </header>
+
+    <!-- Menú móvil -->
+    <div class="overlay" id="overlay" aria-hidden="true">
+      <div class="overlay-bg" id="overlayBg"></div>
+      <aside class="overlay-panel" role="dialog" aria-modal="true">
+        <h3>Menú</h3>
+        <a href="index.html">Inicio</a>
+        <a href="historia.html">Historia</a>
+        <a href="conceptos.html">Conceptos</a>
+        <a href="bibliografia.html">Bibliografía</a>
+      </aside>
+    </div>
+
+    <main>
+      <section class="hero">
+        <h1>Conceptos y Clasificación de Nudos</h1>
+        <p class="lead">Fundamentos matemáticos, tipos de nudos y su relevancia en la topología moderna.</p>
+      </section>
+
+      <section>
+        <h2>Definición formal</h2>
+        <p>Un nudo se define como una incrustación de un círculo en el espacio tridimensional. La teoría de nudos estudia sus propiedades topológicas, cómo pueden deformarse sin cortarse ni pegarse, y busca clasificarlos sistemáticamente.</p>
+      </section>
+
+      <section>
+        <h2>Tipos y clasificaciones</h2>
+
+        <h3>1. Nudo trivial</h3>
+        <p>El nudo trivial es la forma más simple: una circunferencia sin entrelazamientos. Aunque parezca un lazo sin nudo, es el punto de partida en la teoría de nudos.</p>
+
+        <h3>2. Nudo de trébol</h3>
+        <p>Con tres cruces, es el más simple entre los nudos no triviales. Representa una estructura básica para analizar propiedades de simetría y equivalencia.</p>
+
+        <h3>3. Enlaces de nudos</h3>
+        <p>Un enlace de nudos se forma cuando dos o más nudos se entrelazan entre sí sin fusionarse. Un ejemplo cotidiano es una cadena, que puede verse como una secuencia de nudos triviales enlazados.</p>
+
+        <h3>4. Nudo conjugado y primo</h3>
+        <p>Un nudo conjugado se obtiene al unir dos o más nudos mediante un corte y unión de extremos, creando estructuras más complejas.  
+        Un nudo primo, por el contrario, no puede descomponerse en nudos más simples; constituye una unidad fundamental dentro de la teoría.</p>
+
+        <h3>5. Nudos toroidales</h3>
+        <p>Se describen algebraicamente como curvas sobre la superficie de un toro. Su estudio revela conexiones entre geometría y topología algebraica.</p>
+      </section>
+
+      <section>
+        <h2>Clasificación histórica</h2>
+        <p>
+          El físico Guthrie Tait fue pionero en la clasificación de nudos, estableciendo las bases de esta teoría.
+          Su primera clasificación consideraba a todos los átomos como simplemente un núcleo siendo orbitado por un electrón haciendo un circuito cerrado,
+          entonces, variando la ruta que hace el electrón debía poder describir cualquier elemento. Aunque su concepción de la materia era errónea,
+          logró catalogar los primeros 15 nudos de hasta 7 cruces.
+          Junto con James Clerk Maxwell, catalogó los primeros nudos de hasta nueve cruces.
+          Hoy en día, se han identificado más de 352 millones de nudos con hasta 19 cruces, lo que demuestra la complejidad exponencial de esta área de estudio.
+        </p>
+
+        <!-- Imagen de Clasificación -->
+        <div class="img-container">
+          <button id="btnClasif" class="btn-ver-img">Mostrar imagen de la clasificación de nudos</button>
+
+          <div id="clasifBox" class="img-box" hidden>
+            <img src="img/clasificacion.png" alt="Clasificación de nudos">
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <h2>El problema de la equivalencia</h2>
+        <p>Uno de los grandes desafíos en la clasificación de nudos es determinar cuándo dos nudos son realmente distintos. 
+          Un mismo nudo puede parecer completamente diferente tras simples deformaciones, por lo que es esencial garantizar que las clasificaciones no incluya nudos topológicamente equivalentes.
+        </p>
+        <div class="img-container">
+      <button id="btnEquiv" class="btn-ver-img">Mostrar imagen del problema de equivalencia</button>
+
+      <div id="equivBox" class="img-box" hidden>
+        <img src="img/equivalencia.png" alt="Ejemplo del problema de equivalencia en nudos">
+      </div>
+    </div>
+
+      </section>
+
+      <section>
+        <h2>Movimientos de Reidemeister</h2>
+        <p>En 1927, Kurt Reidemeister demostró que cualquier par de diagramas del mismo nudo pueden relacionarse mediante tres movimientos elementales.  
+        Este teorema es la base formal para probar la equivalencia entre nudos.</p>
+
+        <ul>
+          <li><strong>Movimiento I:</strong> Introducir o eliminar un bucle.</li>
+          <li><strong>Movimiento II:</strong> Deslizar un segmento sobre otro, añadiendo o eliminando dos cruces.</li>
+          <li><strong>Movimiento III:</strong> Deslizar un segmento sobre una intersección sin alterar las conexiones.</li>
+        </ul>
+
+        <!-- Imagen de Reidemeister -->
+        <div class="img-container">
+          <button id="btnReid" class="btn-ver-img">Mostrar imagen de los movimientos de Reidemeister</button>
+
+          <div id="reidBox" class="img-box" hidden>
+            <img src="img/Reidemeister.jpg" alt="Movimientos de Reidemeister">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Nudos Diminutos</h2>
+        <p>En el interior de nuestras células y en la corriente sanguínea existen estructuras que, sorprendentemente, adoptan formas de nudos. 
+        El ADN, portador de nuestra información genética, se comporta como un nudo diminuto, con enredos y cruces que influyen en su replicación y expresión genética.
+        </p>
+        <div class="img-container">
+        <button id="btnAdn" class="btn-ver-img">Mostrar imagen del ADN anudado</button>
+
+        <div id="adnBox" class="img-box" hidden>
+          <img src="img/adn.png" alt="Estructura de ADN con nudos">
+        </div>
+      </div>
+
+      </section>
+
+      <section>
+        <h2>Matemáticos destacados</h2>
+        <p><strong>Francisco Xavier “Fico” González Acuña</strong>, matemático mexicano, pionero en topología y teoría de nudos en América Latina.  
+        Su trabajo y docencia en México han impulsado generaciones de investigadores, siendo referente en la comunidad matemática internacional.</p>
+
+        <!-- Imagen de Fico -->
+        <div class="img-container">
+          <button id="btnFico" class="btn-ver-img">Mostrar imagen de Fico González Acuña</button>
+
+          <div id="ficoBox" class="img-box" hidden>
+            <img src="img/fico.png" alt="Fico González Acuña">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Explora más</h2>
+        <ul>
+          <li><a href="historia.html">← Regresar a Historia</a></li>
+          <li><a href="bibliografia.html">Ir a Bibliografía</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="muted">© Universidad de Guadalajara — Departamento de Matemáticas</div>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+:root {
+  --udg-blue: #002855;
+  --udg-orange: #d16a1d;      /* Naranja institucional */
+  --grey-light: #f2f2f2;
+  --grey-border: #d5d5d5;
+  --max-width: 1200px;
+}
+
+html, body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: white;
+  color: #333;
+}
+
+/* --- LAYOUT GENERAL --- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* --- ENCABEZADO INSTITUCIONAL --- */
+header {
+  background: white;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--grey-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--udg-blue);
+}
+
+.muted {
+  font-size: 13px;
+  color: #666;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+}
+
+nav a:hover {
+  color: var(--udg-orange);
+}
+
+/* --- BARRA NARANJA INSTITUCIONAL / HERO --- */
+.hero {
+  background: var(--udg-orange);
+  padding: 26px;
+  color: white;
+  margin-top: 0;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.05);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+}
+
+.lead {
+  margin-top: 8px;
+  color: #fffde8;
+}
+
+/* --- SECCIONES DE CONTENIDO --- */
+section {
+  background: white;
+  padding: 26px;
+  margin: 26px 0;
+  border: 1px solid var(--grey-border);
+  border-radius: 6px;
+}
+
+section h2 {
+  color: var(--udg-blue);
+  border-bottom: 2px solid var(--udg-orange);
+  padding-bottom: 6px;
+}
+
+/* --- LISTAS Y ENLACES --- */
+ul li a {
+  color: var(--udg-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+ul li a:hover {
+  color: var(--udg-orange);
+}
+
+/* --- ASIDE (por si lo usas después) --- */
+aside.card {
+  border: 1px solid var(--grey-border);
+  background: var(--grey-light);
+  padding: 16px;
+  border-radius: 5px;
+}
+
+/* --- MENÚ HAMBURGUESA MÓVIL --- */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 8px;
+}
+
+.hamburger .bar {
+  width: 22px;
+  height: 3px;
+  background: var(--udg-blue);
+  margin: 4px 0;
+}
+
+/* --- OVERLAY MENÚ MÓVIL --- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  display: none;
+  z-index: 200;
+}
+
+.overlay-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  border-left: 1px solid var(--grey-border);
+  padding: 24px;
+}
+
+.overlay-panel a {
+  display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  color: var(--udg-blue);
+  text-decoration: none;
+}
+
+/* --- FOOTER --- */
+footer {
+  background: white;
+  padding: 16px;
+  border-top: 1px solid var(--grey-border);
+  color: #666;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* --- BOTONES E IMÁGENES (GENÉRICOS PARA CUALQUIER SECCIÓN) --- */
+.img-container {
+  margin-top: 20px;
+}
+
+.btn-ver-img {
+  background: var(--udg-orange);
+  border: none;
+  padding: 10px 16px;
+  font-size: 15px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn-ver-img:hover {
+  background: #b85a18;
+}
+
+.img-box {
+  margin-top: 18px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.img-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+/* --- ZOOM suave al pasar el cursor sobre las imágenes --- */
+.img-box img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+}
+
+.img-box img:hover {
+  transform: scale(1.08);
+}
