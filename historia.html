@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Historia — Departamento de Matemáticas UDG</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Estilos específicos del menú hamburguesa -->
+  <style>
+    /* Botón hamburguesa */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1001;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #1E3A5F;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
+
+    /* Overlay menú */
+    .overlay-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 70%;
+      max-width: 300px;
+      height: 100%;
+      background-color: #f8f8f8;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+      padding: 2rem;
+      z-index: 1000;
+    }
+    .overlay-menu a {
+      display: block;
+      margin: 1rem 0;
+      font-weight: bold;
+      color: #1E3A5F;
+      text-decoration: none;
+    }
+    .overlay-menu .close-menu {
+      display: block;
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: #1E3A5F;
+    }
+
+    /* Mostrar botón en pantallas pequeñas */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+    /* Menú visible en desktop */
+nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Menú oculto en móvil */
+@media (max-width: 768px) {
+  nav {
+    display: none !important;
+  }
+}
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="img/logo.png" alt="Logo UDG" style="width:60px;height:auto;border-radius:8px;"></div>
+        <div>
+          <div class="site-title">Departamento de Matemáticas — Universidad de Guadalajara</div>
+          <div class="muted">Portal institucional</div>
+        </div>
+      </div>
+      <nav>
+    <a href="index.html">Inicio</a>
+    <a href="historia.html">Historia</a>
+    <a href="conceptos.html">Conceptos</a>
+    <a href="bibliografia.html">Bibliografía</a>
+  </nav>
+
+      
+
+      <!-- Botón hamburguesa -->
+      <button class="hamburger" id="hambBtn" aria-label="Abrir menú">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+
+      <!-- Overlay menú móvil -->
+      <div class="overlay-menu" id="overlayMenu">
+        <span class="close-menu" id="closeMenu">&times;</span>
+        <a href="index.html">Inicio</a>
+        <a href="historia.html" class="active">Historia</a>
+        <a href="conceptos.html">Conceptos</a>
+        <a href="bibliografia.html">Bibliografía</a>
+      </div>
+
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Historia de los Nudos</h1>
+        <p class="lead">Desde las civilizaciones antiguas hasta la formalización matemática moderna, los nudos han acompañado al ser humano como símbolo, herramienta y objeto de estudio.</p>
+      </section>
+
+      <section>
+        <h2>Orígenes culturales</h2>
+
+        <!-- ==== QUIPU ==== -->
+        <p><strong>Quipu — Usado por los Incas y culturas andinas</strong></p>
+        <p>Los nudos quipu eran un sistema de registro numérico y administrativo que consistía en cordones principales con cordones colgantes y diferentes tipos de nudos para representar cifras.
+        Los encargados de leer y crear quipus (quipucamayocs) eran considerados en su cultura como poseedores de memoria casi “mística”. Los españoles dejaron crónicas que hablaban de “nudos que guardaban historias” haciendo alusión a este intrigante uso de los nudos.
+        </p>
+
+        <div class="img-container">
+          <button id="btnQuipu" class="btn-ver-img">Mostrar imagen de un quipu</button>
+          <div id="quipuBox" class="img-box" hidden>
+            <img src="img/quipu.png" alt="Quipu inca">
+          </div>
+        </div>
+
+        <!-- ==== TYET ==== -->
+        <p><strong>El Nudo Tyet o Nudo de Isis — Egipto antiguo</strong></p>
+        <p>Este nudo fue usado como amuleto funerario y símbolo protector, se creía que le brindaba protección al difunto en la otra vida.
+        También se portaba como veneración a la diosa Isis y considerándolo un símbolo de fertilidad, ligado a la magia sanadora de la diosa.
+        </p>
+
+        <div class="img-container">
+          <button id="btnTyet" class="btn-ver-img">Mostrar imagen del nudo Tyet</button>
+          <div id="tyetBox" class="img-box" hidden>
+            <img src="img/tyet.png" alt="Nudo Tyet">
+          </div>
+        </div>
+
+        <!-- ==== NUDO GORDIANO ==== -->
+        <p><strong>El Nudo Gordiano — Leyenda griega</strong></p>
+        <p>Cuenta la leyenda que se tenía el nudo gordiano resguardando el carro sagrado se tenía la creencia de quien desatara aquel nudo sería rey de Asia; Alejandro Magno se atribuye el haber desatado este nudo cuando lo cortó con su espada, convirtiéndolo en metáfora de soluciones audaces a problemas complejos. .</p>
+
+        <div class="img-container">
+          <button id="btnGordiano" class="btn-ver-img">Mostrar imagen del nudo gordiano</button>
+          <div id="gordianoBox" class="img-box" hidden>
+            <img src="img/gordiano.png" alt="Nudo gordiano">
+          </div>
+        </div>
+
+        <!-- ==== NUDOS CELTAS ==== -->
+        <p><strong>Nudos Celtas — Entrelazados y “nudos eternos”</strong></p>
+        <p>Este tipo de nudos es muy usual de ver en la decoración en manuscritos, joyería y tallados en piedra.
+        Estos diseños siempre constan de enlaces entre distintos nudos, sin comienzo ni fin simbolizando  la eternidad, cada uno de los cruces interconectados simbolizan vida, muerte y renacimiento, ya al igual que en otras culturas se les atribuían propiedades protectoras.
+        </p>
+
+        <div class="img-container">
+          <button id="btnCelta" class="btn-ver-img">Mostrar imagen de nudos celtas</button>
+          <div id="celtaBox" class="img-box" hidden>
+            <img src="img/celta.png" alt="Nudo celta">
+          </div>
+        </div>
+
+        <!-- ==== NUDOS CHINOS ==== -->
+        <p><strong>Nudos Chinos (中国结)</strong></p>
+        <p>Los nudos chinos son un arte identitario de su cultura usados de forma decorativa y comúnmente usado en bodas y fechas importantes como amuletos de buena suerte y adornos festivos
+        Muchos nudos chinos tienen nombres y significados amor, longevidad, fortuna, formando en sí mismo una clasificación de nudos  hay evidencias arqueológicas antiguas que muestran que ya eran símbolos desde hace milenios.
+        </p>
+
+        <div class="img-container">
+          <button id="btnChino" class="btn-ver-img">Mostrar imagen de nudos chinos</button>
+          <div id="chinoBox" class="img-box" hidden>
+            <img src="img/nudo_chino.png" alt="Nudo chino">
+          </div>
+        </div>
+
+        <!-- ==== MIZUHIKI ==== -->
+        <p><strong>Mizuhiki y nudos japoneses</strong></p>
+        <p>Uso: cintas y nudos ceremoniales (envoltorio de regalos, sobres de dinero), cada estilo de nudo transmite una intención (alegría, condolencia, compromiso).
+          Folclor/mitología: el tipo de nudo en un mizuhiki comunica deseo de continuidad (no desatar) o de separación (desatabilidad), y forma parte del lenguaje ritual social japonés. (Vinculado al uso ritual de los nudos en la cultura material japonesa.)
+          </p>
+
+        <div class="img-container">
+          <button id="btnMizuhiki" class="btn-ver-img">Mostrar imagen del mizuhiki</button>
+          <div id="mizuhikiBox" class="img-box" hidden>
+            <img src="img/mizuhiki.png" alt="Nudos japoneses Mizuhiki">
+          </div>
+        </div>
+
+        <!-- ==== NUDOS MARINEROS ==== -->
+        <p><strong>Nudos marineros</strong></p>
+        <p> Uso: imprescindible en navegación — amarras, velas, aparejos; la destreza en nudos determinaba seguridad y eficacia en la navegación.
+        Folclor/mitología: proliferaron leyendas de marineros que “leían” los nudos; además el término “knot” como unidad de velocidad procede de una práctica real: medir la velocidad con una sonda con nudos a intervalos.
+
+                </p>
+
+        <div class="img-container">
+          <button id="btnMarinero" class="btn-ver-img">Mostrar imagen de nudos marineros</button>
+          <div id="marineroBox" class="img-box" hidden>
+            <img src="img/marinero.png" alt="Nudos marineros">
+          </div>
+        </div>
+
+        <!-- ==== NUDO DE HERACLES ==== -->
+        <p><strong>Nudo de Heracles / Hércules</strong></p>
+        <p>Uso: motivo en amuletos y joyería (pulseras, fibras trenzadas) y en ataduras simbólicas para protección, matrimonio y salud.
+        Folclor/mitología: asociado a Heracles/Hércules como símbolo protector; en algunos contextos se usaba en rituales para garantizar salud y unión (nudos de compromiso).
+        </p>
+
+        <div class="img-container">
+          <button id="btnHeracles" class="btn-ver-img">Mostrar imagen del nudo de Heracles</button>
+          <div id="heraclesBox" class="img-box" hidden>
+            <img src="img/heracles.png" alt="Nudo de Heracles">
+          </div>
+        </div>
+
+        <!-- ==== NUDO SIN FIN ==== -->
+        <p><strong>El nudo sin fin — Símbolo dhármico</strong></p>
+        <p>Uso: símbolo religioso y decorativo (uno de los “Ocho símbolos auspiciosos” en el budismo tibetano; aparece también en arte indio y chino).
+        Folclor/mitología: representa la interdependencia, la unión de sabiduría y compasión, y el ciclo sin fin de samsara; aparece en textos muy antiguos y en gran cantidad de iconografía religiosa.
+        </p>
+
+        <div class="img-container">
+          <button id="btnSinFin" class="btn-ver-img">Mostrar imagen del nudo sin fin</button>
+          <div id="sinfinBox" class="img-box" hidden>
+            <img src="img/sinfin.png" alt="Nudo sin fin tibetano">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Explora más</h2>
+        <ul>
+          <li><a href="index.html">Volver al inicio</a></li>
+          <li><a href="conceptos.html">Ir a conceptos y clasificación</a></li>
+          <li><a href="bibliografia.html">Ver bibliografía completa</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="udg-footer">
+      <div class="footer-top">
+        <img src="img/logo.png" alt="Logo Universidad de Guadalajara">
+        <div>
+          <strong>UNIVERSIDAD DE GUADALAJARA</strong><br>
+          CENTRO UNIVERSITARIO DE CIENCIAS EXACTAS E INGENIERÍAS<br>
+          Blvd. Marcelino García Barragán #1421, esq Calzada Olímpica, C.P. 44430, Guadalajara, Jalisco, México.<br>
+          <strong>Teléfono: +52 33 1378 5900.</strong>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        Derechos reservados ©1997 - 2025. Universidad de Guadalajara.
+      </div>
+    </footer>
+  </div>
+
+  <!-- Script para menú hamburguesa -->
+  <script>
+    const hambBtn = document.getElementById('hambBtn');
+    const overlayMenu = document.getElementById('overlayMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    hambBtn.addEventListener('click', () => {
+      overlayMenu.style.display = 'block';
+    });
+
+    closeMenu.addEventListener('click', () => {
+      overlayMenu.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if(e.target === overlayMenu) {
+        overlayMenu.style.display = 'none';
+      }
+    });
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conceptos — Departamento de Matemáticas UDG</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Estilos específicos del menú hamburguesa -->
+  <style>
+    /* Botón hamburguesa */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1001;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #1E3A5F;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
+
+    /* Overlay menú */
+    .overlay-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 70%;
+      max-width: 300px;
+      height: 100%;
+      background-color: #f8f8f8;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+      padding: 2rem;
+      z-index: 1000;
+    }
+    .overlay-menu a {
+      display: block;
+      margin: 1rem 0;
+      font-weight: bold;
+      color: #1E3A5F;
+      text-decoration: none;
+    }
+    .overlay-menu .close-menu {
+      display: block;
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: #1E3A5F;
+    }
+
+    /* Mostrar botón en pantallas pequeñas */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+    .hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+/* Menú visible en desktop */
+nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Menú oculto en móvil */
+@media (max-width: 768px) {
+  nav {
+    display: none !important;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="img/logo.png" alt="Logo UDG" style="width:60px;height:auto;border-radius:8px;"></div>
+        <div>
+          <div class="site-title">Departamento de Matemáticas — Universidad de Guadalajara</div>
+          <div class="muted">Portal institucional</div>
+        </div>
+      </div>
+        <nav>
+    <a href="index.html">Inicio</a>
+    <a href="historia.html">Historia</a>
+    <a href="conceptos.html">Conceptos</a>
+    <a href="bibliografia.html">Bibliografía</a>
+  </nav>
+      
+
+      <!-- Botón hamburguesa -->
+      <button class="hamburger" id="hambBtn" aria-label="Abrir menú">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+
+      <!-- Overlay menú móvil -->
+      <div class="overlay-menu" id="overlayMenu">
+        <span class="close-menu" id="closeMenu">&times;</span>
+        <a href="index.html">Inicio</a>
+        <a href="historia.html">Historia</a>
+        <a href="conceptos.html" class="active">Conceptos</a>
+        <a href="bibliografia.html">Bibliografía</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Conceptos y Clasificación de Nudos</h1>
+        <p class="lead">Fundamentos matemáticos, tipos de nudos y su relevancia en la topología moderna.</p>
+      </section>
+
+      <section>
+        <h2>Definición formal</h2>
+        <p>Un nudo se define como una incrustación de un círculo en el espacio tridimensional. 
+        La teoría de nudos estudia las propiedades topológicas, cómo pueden deformarse sin cortarse ni pegarse, y busca clasificarlos de manera sistemática.
+        </p>
+      </section>
+
+      <section>
+        <h2>Tipos y clasificaciones</h2>
+
+        <h3>1. Nudo trivial y nudo de trébol</h3>
+        <p>
+          En el estudio de los nudos, se consideran lazos cerrados para evitar que se deshagan o pierdan sus propiedades cuando se manipulan.
+        </p>
+        <p>
+          El nudo trivial es la forma más simple: una circunferencia sin entrelazamientos. 
+          Es el punto de partida en la teoría de nudos.
+        </p>
+        <p>
+          El nudo trébol, con tres cruces, es el nudo no trivial más simple y uno de los más estudiados. 
+          Representa la primera estructura realmente diferente al nudo trivial.
+        </p>
+
+        <div class="img-container">
+          <button id="btnNudo1" class="btn-ver-img">Mostrar imágenes del trivial y trébol</button>
+          <div id="nudo1Box" class="img-box" hidden>
+            <img id="nudo1Img" src="img/trivial.png" alt="Nudo trivial y nudo de trébol">
+          </div>
+        </div>
+
+        <h3>2. Enlaces de nudos</h3>
+        <p>
+          Un enlace de nudos se forma cuando dos o más nudos se entrelazan entre sí sin fusionarse.
+          Un ejemplo cotidiano es una cadena, que puede interpretarse como una secuencia de nudos triviales enlazados entre sí.
+        </p>
+
+        <div class="img-container">
+          <button id="btnNudo3" class="btn-ver-img">Mostrar imagen de enlaces de nudos</button>
+          <div id="nudo3Box" class="img-box" hidden>
+            <img src="img/enlace.png" alt="Enlaces de nudos">
+          </div>
+        </div>
+
+        <h3>3. Nudo conjugado y primo</h3>
+        <p>
+          Un nudo conjugado se obtiene al unir dos o más nudos mediante cortes y uniones de extremos, creando una estructura más compleja.
+          Un nudo primo no puede descomponerse en nudos más simples; es una unidad fundamental dentro de la teoría.
+        </p>
+
+        <div class="img-container">
+          <button id="btnNudo4" class="btn-ver-img">Mostrar imagen del nudo conjugado/primo</button>
+          <div id="nudo4Box" class="img-box" hidden>
+            <img src="img/primo.png" alt="Nudo conjugado y primo">
+          </div>
+        </div>
+
+        <h3>4. Nudos toroidales</h3>
+        <p>
+          Dentro del amplio universo de los nudos, los nudos toroidales destacan por su estructura y profundidad matemática, lo que los hace especialmente interesantes es que pueden describirse algebraicamente como curvas sobre la superficie de un toro.
+        </p>
+
+        <div class="img-container">
+          <button id="btnNudo5" class="btn-ver-img">Mostrar imagen de los nudos toroidales</button>
+          <div id="nudo5Box" class="img-box" hidden>
+            <img src="img/toro.png" alt="Nudos toroidales">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Clasificación histórica</h2>
+        <p>
+         El físico Guthrie Tait fue pionero en la clasificación de nudos, estableciendo las bases de esta teoría.
+          Su primera clasificación consideraba a todos los átomos como simplemente un núcleo siendo orbitado por un electrón haciendo un circuito cerrado, entonces, variando la ruta que hace el electrón debía poder describir cualquier elemento. Aunque su concepción de la materia era errónea, logró catalogar los primeros 15 nudos  de hasta 7 cruces.
+          Junto con James Clerk Maxwell, catalogó los primeros nudos de hasta nueve cruces.
+          Hoy en día, se han identificado más de 352 millones de nudos con hasta 19 cruces, lo que demuestra la complejidad exponencial de esta área de estudio.
+        </p>
+
+        <div class="img-container">
+          <button id="btnClasif" class="btn-ver-img">Mostrar imagen de la clasificación de nudos</button>
+          <div id="clasifBox" class="img-box" hidden>
+            <img src="img/clasificacion.png" alt="Clasificación de nudos">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>El problema de la equivalencia</h2>
+        <p>
+          Uno de los grandes desafíos en la clasificación de nudos es determinar cuándo dos nudos son realmente distintos. 
+          Un mismo nudo puede parecer completamente diferente tras simples deformaciones, por lo que es esencial garantizar que las clasificaciones no incluyan nudos topológicamente equivalentes.
+        </p>
+
+        <div class="img-container">
+          <button id="btnEquiv" class="btn-ver-img">Mostrar imágenes del problema de equivalencia</button>
+          <div id="equivBox" class="img-box" hidden>
+            <div class="slider">
+              <img id="equivImg" src="img/equi.png" alt="Problema de equivalencia">
+              <button class="slide-btn left" id="equivPrev">&#10094;</button>
+              <button class="slide-btn right" id="equivNext">&#10095;</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Movimientos de Reidemeister</h2>
+        <p>En 1927, el matemático Kurt Reidemeister demostró que cualquier par de diagramas de un mismo nudo pueden relacionarse mediante tres movimientos elementales. Este teorema proporciona la base formal para probar la equivalencia entre nudos.</p>
+        <div class="img-container">
+          <button id="btnReid" class="btn-ver-img">Mostrar imagen de los movimientos de Reidemeister</button>
+          <div id="reidBox" class="img-box" hidden>
+            <img src="img/Reidemeister.jpg" alt="Movimientos de Reidemeister">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Nudos Diminutos</h2>
+        <p>En el interior de nuestras células y en la corriente sanguínea existen estructuras que, sorprendentemente, adoptan formas de nudos. 
+        El ADN, portador de nuestra información genética, se comporta como un nudo diminuto, con enredos y cruces que influyen en su replicación y expresión genética.
+        </p>
+
+        <div class="img-container">
+          <button id="btnAdn" class="btn-ver-img">Mostrar imagen del ADN anudado</button>
+          <div id="adnBox" class="img-box" hidden>
+            <img src="img/adn.png" alt="Estructura de ADN con nudos">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Matemáticos destacados</h2>
+        <p><strong>Francisco Xavier “Fico” González Acuña, </strong> Matemático mexicano y una de las figuras más destacadas en la teoría de nudos y topología en América Latina, nacido en 1939 en la Ciudad de México, es pionero en introducir y desarrollar esta disciplina en el país, además de su brillantez académica, se le conoce por su creatividad, humildad y vocación docente, que ha inspirado a generaciones de matemáticos.</p>
+
+        <div class="img-container">
+          <button id="btnFico" class="btn-ver-img">Mostrar imagen de Fico González Acuña</button>
+          <div id="ficoBox" class="img-box" hidden>
+            <img src="img/fico.png" alt="Fico González Acuña">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Explora más</h2>
+        <ul>
+          <li><a href="historia.html">← Regresar a Historia</a></li>
+          <li><a href="bibliografia.html">Ir a Bibliografía</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="udg-footer">
+      <div class="footer-top">
+        <img src="img/logo.png" alt="Logo Universidad de Guadalajara">
+        <div>
+          <strong>UNIVERSIDAD DE GUADALAJARA</strong><br>
+          CENTRO UNIVERSITARIO DE CIENCIAS EXACTAS E INGENIERÍAS<br>
+          Blvd. Marcelino García Barragán #1421, esq Calzada Olímpica, C.P. 44430, Guadalajara, Jalisco, México.<br>
+          <strong>Teléfono: +52 33 1378 5900.</strong>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        Derechos reservados ©1997 - 2025. Universidad de Guadalajara.
+      </div>
+    </footer>
+  </div>
+
+  <!-- Script para menú hamburguesa -->
+  <script>
+    const hambBtn = document.getElementById('hambBtn');
+    const overlayMenu = document.getElementById('overlayMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    hambBtn.addEventListener('click', () => {
+      overlayMenu.style.display = 'block';
+    });
+
+    closeMenu.addEventListener('click', () => {
+      overlayMenu.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if(e.target === overlayMenu) {
+        overlayMenu.style.display = 'none';
+      }
+    });
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

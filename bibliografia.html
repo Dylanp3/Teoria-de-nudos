@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bibliografía — Departamento de Matemáticas UDG</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Estilos específicos del menú hamburguesa -->
+  <style>
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1001;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #1E3A5F;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
+
+    .overlay-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 70%;
+      max-width: 300px;
+      height: 100%;
+      background-color: #f8f8f8;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+      padding: 2rem;
+      z-index: 1000;
+    }
+    .overlay-menu a {
+      display: block;
+      margin: 1rem 0;
+      font-weight: bold;
+      color: #1E3A5F;
+      text-decoration: none;
+    }
+    .overlay-menu .close-menu {
+      display: block;
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: #1E3A5F;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+    .hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+/* Menú visible en desktop */
+nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Menú oculto en móvil */
+@media (max-width: 768px) {
+  nav {
+    display: none !important;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="img/logo.png" alt="Logo UDG" style="width:60px;height:auto;border-radius:8px;"></div>
+        <div>
+          <div class="site-title">Departamento de Matemáticas — Universidad de Guadalajara</div>
+          <div class="muted">Portal institucional</div>
+        </div>
+      </div>
+      <nav>
+    <a href="index.html">Inicio</a>
+    <a href="historia.html">Historia</a>
+    <a href="conceptos.html">Conceptos</a>
+    <a href="bibliografia.html">Bibliografía</a>
+  </nav>
+
+    
+
+      <!-- Botón hamburguesa -->
+      <button class="hamburger" id="hambBtn" aria-label="Abrir menú">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+
+      <!-- Overlay menú móvil -->
+      <div class="overlay-menu" id="overlayMenu">
+        <span class="close-menu" id="closeMenu">&times;</span>
+        <a href="index.html">Inicio</a>
+        <a href="historia.html">Historia</a>
+        <a href="conceptos.html">Conceptos</a>
+        <a href="bibliografia.html" class="active">Bibliografía</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Bibliografía</h1>
+        <p class="lead">Referencias académicas y fuentes consultadas sobre teoría de nudos y topología.</p>
+      </section>
+
+      <section>
+        <h2>Fuentes principales</h2>
+
+        <ul>
+          <li>Adams, C. C. (2004). <em>The Knot Book: An Elementary Introduction to the Mathematical Theory of Knots</em> (Rev. ed.). American Mathematical Society.</li>
+          <li>Lickorish, W. B. R. (1997). <em>An Introduction to Knot Theory</em>. Springer-Verlag. <a href="https://doi.org/10.1007/978-1-4612-0691-0" target="_blank">https://doi.org/10.1007/978-1-4612-0691-0</a></li>
+          <li>Livingston, C. (1993). <em>Knot Theory</em>. The Mathematical Association of America.</li>
+          <li>Rolfsen, D. (1976). <em>Knots and Links</em>. Publish or Perish.</li>
+          <li>Kauffman, L. H. (2001). <em>Knots and Physics</em> (Vol. 1). World Scientific.</li>
+          <li>Albanés, J. J. M., Nieto, J. G. R., & Díaz, O. P. S. (2016). <em>Introduction to Knot Theory</em>. Revista de Ciencias, 20(2).</li>
+          <li>Crowell, R. H., & Fox, R. H. (2012). <em>Introduction to Knot Theory</em>. Springer Science & Business Media.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Lecturas complementarias</h2>
+        <p>Además de las obras académicas, se recomienda explorar publicaciones recientes sobre aplicaciones de la teoría de nudos en biología molecular, física y ciencias de materiales.</p>
+      </section>
+
+      <section>
+        <h2>Enlaces institucionales</h2>
+        <ul>
+          <li><a href="https://www.udg.mx/" target="_blank">Universidad de Guadalajara</a></li>
+          <li><a href="https://www.cucei.udg.mx/" target="_blank">Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI)</a></li>
+          <li><a href="https://www.cucei.udg.mx/es/directorio/departamento-de-matematicas" target="_blank">Departamento de Matemáticas — CUCEI</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Navegación</h2>
+        <ul>
+          <li><a href="index.html">← Volver al inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="conceptos.html">Conceptos y clasificación</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="udg-footer">
+      <div class="footer-top">
+        <img src="img/logo.png" alt="Logo Universidad de Guadalajara">
+        <div>
+          <strong>UNIVERSIDAD DE GUADALAJARA</strong><br>
+          CENTRO UNIVERSITARIO DE CIENCIAS EXACTAS E INGENIERÍAS<br>
+          Blvd. Marcelino García Barragán #1421, esq Calzada Olímpica, C.P. 44430, Guadalajara, Jalisco, México.<br>
+          <strong>Teléfono: +52 33 1378 5900.</strong>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        Derechos reservados ©1997 - 2025. Universidad de Guadalajara.
+      </div>
+    </footer>
+  </div>
+
+  <!-- Script para menú hamburguesa -->
+  <script>
+    const hambBtn = document.getElementById('hambBtn');
+    const overlayMenu = document.getElementById('overlayMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    hambBtn.addEventListener('click', () => {
+      overlayMenu.style.display = 'block';
+    });
+
+    closeMenu.addEventListener('click', () => {
+      overlayMenu.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if(e.target === overlayMenu) {
+        overlayMenu.style.display = 'none';
+      }
+    });
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Departamento de Matemáticas — Universidad de Guadalajara</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* =============================== */
+/*      PALETA DE COLORES          */
+/* =============================== */
+:root {
+  --bg-main: #DDE8F7;
+  --blue-dark: #1E3A5F;
+  --blue-mid: #5078A0;
+  --blue-soft: #EDF3FB;
+  --grey-border: #BCC9DA;
+  --accent: #E8A15A;
+  --max-width: 1200px;
+}
+
+/* =============================== */
+/*     ESTILOS GENERALES           */
+/* =============================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #2a2a2a;
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* =============================== */
+/*           HEADER                */
+/* =============================== */
+header {
+  background: white;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--blue-mid);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.brand .logo img {
+  width: 55px;
+  height: auto;
+  border-radius: 8px;
+}
+.site-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--blue-dark);
+}
+.muted {
+  font-size: 13px;
+  color: var(--blue-mid);
+}
+/* NAV */
+nav a {
+  color: var(--blue-dark);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+}
+nav a:hover {
+  color: var(--accent);
+}
+
+/* =============================== */
+/*           HERO                  */
+/* =============================== */
+.hero {
+  background: var(--blue-mid);
+  padding: 30px;
+  color: white;
+  box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.07);
+}
+.hero h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+.lead {
+  margin-top: 6px;
+  color: #f4f7ff;
+}
+
+/* =============================== */
+/*           SECCIONES             */
+/* =============================== */
+section {
+  background: var(--blue-soft);
+  padding: 26px;
+  margin: 26px 0;
+  border: 1px solid var(--grey-border);
+  border-radius: 8px;
+}
+section h2 {
+  color: var(--blue-dark);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 6px;
+}
+ul li a {
+  color: var(--blue-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+ul li a:hover {
+  color: var(--accent);
+}
+
+/* =============================== */
+/*  ASIDE / CARDS                  */
+/* =============================== */
+aside.card {
+  border: 1px solid var(--grey-border);
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+/* =============================== */
+/*  CARRUSEL TURING CONTINUO       */
+/* =============================== */
+.turing-slider {
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid var(--grey-border);
+  background: white;
+  border-radius: 8px;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+.turing-track {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: max-content;
+  animation: scrollTape 35s linear infinite;
+}
+.turing-track img {
+  width: auto;
+  height: 120px;         /* altura uniforme */
+  object-fit: contain;    /* mantiene proporción sin deformar */
+  border-radius: 6px;
+  background: var(--blue-soft);
+  padding: 6px;
+  border: 1px solid var(--grey-border);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+.turing-track img:hover {
+  transform: scale(1.08);
+}
+
+/* Duplicamos el track automáticamente para scroll continuo */
+.turing-track::after {
+  content: '';
+  display: block;
+  width: 100%;
+}
+@keyframes scrollTape {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* =============================== */
+/*  MODAL DE IMAGEN                */
+/* =============================== */
+.img-box {
+  margin: 18px auto;
+  padding: 12px;
+  border: 1px solid var(--grey-border);
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.img-box img {
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  cursor: zoom-in;
+  transition: transform 0.25s ease;
+  border-radius: 6px;
+}
+.img-box img:hover {
+  transform: scale(1.08);
+}
+.btn-ver-img {
+  background: var(--accent);
+  border: none;
+  padding: 10px 16px;
+  font-size: 15px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+  margin-top: 10px;
+}
+.btn-ver-img:hover {
+  background: #c68949;
+}
+.img-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+.img-modal.active {
+  display: flex;
+}
+.img-modal-content {
+  background: #fff;
+  padding: 18px;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 14px;
+  text-align: center;
+  position: relative;
+  animation: aparecer 0.25s ease;
+}
+.img-modal-content img {
+  width: 100%;
+  max-width: 300px;   /* ancho máximo */
+  height: 200px;      /* altura fija */
+  object-fit: contain; /* mantiene proporción */
+  border-radius: 10px;
+}
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #444;
+}
+@keyframes aparecer {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* =============================== */
+/*           FOOTER                */
+/* =============================== */
+.udg-footer {
+  margin-top: 40px;
+  padding: 40px 0 30px;
+  background: white;
+  border-top: 1px solid var(--grey-border);
+  color: var(--blue-dark);
+  font-size: 15px;
+}
+.udg-footer .footer-top {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 25px;
+}
+.udg-footer .footer-top img {
+  width: 90px;
+  object-fit: contain;
+  filter: brightness(0.8);
+}
+.udg-footer .footer-bottom {
+  margin-top: 10px;
+  text-align: center;
+  color: var(--blue-mid);
+  border-top: 1px solid var(--grey-border);
+  padding-top: 12px;
+  font-size: 13px;
+}
+
+/* =============================== */
+/*           RESPONSIVE            */
+/* =============================== */
+@media (max-width: 600px) {
+  .udg-footer .footer-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 10px 0 !important;
+  }
+  .udg-footer .footer-top img {
+    width: 55px !important;
+  }
+  .udg-footer { font-size: 12px !important; }
+  .turing-track img { height: 80px; padding: 4px; }
+  .img-box { padding: 10px; max-width: 320px; }
+  .img-box img { max-height: 220px; }
+}
+
+/* =============================== */
+/*      MENÚ HAMBURGUESA           */
+/* =============================== */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #1E3A5F;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+.overlay-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #f8f8f8;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+  padding: 2rem;
+  z-index: 1000;
+}
+.overlay-menu a {
+  display: block;
+  margin: 1rem 0;
+  font-weight: bold;
+  color: #1E3A5F;
+  text-decoration: none;
+}
+.overlay-menu .close-menu {
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #1E3A5F;
+}
+@media (max-width: 768px) {
+  nav { display: none; }
+  .hamburger { display: block; }
+}
+
+/* Menú visible en desktop */
+nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Menú oculto en móvil */
+@media (max-width: 768px) {
+  nav {
+    display: none !important;
+  }
+}
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <img src="img/logo.png" alt="Logo UDG" style="width:60px;height:auto;border-radius:8px;">
+        </div>
+        <div>
+          <div class="site-title">Departamento de Matemáticas — Universidad de Guadalajara</div>
+          <div class="muted">Portal institucional</div>
+        </div>
+      </div>
+      <nav>
+    <a href="index.html">Inicio</a>
+    <a href="historia.html">Historia</a>
+    <a href="conceptos.html">Conceptos</a>
+    <a href="bibliografia.html">Bibliografía</a>
+  </nav>
+
+      <!-- Botón hamburguesa -->
+      <button class="hamburger" id="hambBtn" aria-label="Abrir menú">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+
+      <!-- Overlay menú móvil -->
+      <div class="overlay-menu" id="overlayMenu">
+        <span class="close-menu" id="closeMenu">&times;</span>
+        <a href="index.html">Inicio</a>
+        <a href="historia.html">Historia</a>
+        <a href="conceptos.html">Conceptos</a>
+        <a href="bibliografia.html">Bibliografía</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Departamento de Matemáticas — Universidad de Guadalajara</h1>
+        <p class="lead">Página institucional dedicada a la difusión académica y cultural de la teoría de nudos, basada en documentos oficiales del Departamento de Matemáticas.</p>
+      </section>
+
+      <section>
+        <h2>Definición</h2>
+        <p>Un nudo se define como una incrustación de un círculo en el espacio tridimensional. 
+        La teoría de nudos estudia las propiedades topológicas, cómo pueden deformarse sin cortarse ni pegarse, y busca clasificarlos de manera sistemática.
+        </p>
+  
+      </section>
+
+      <section>
+        <h2>Galería</h2>
+        <div class="turing-slider">
+          <div class="turing-track" id="turingTrack">
+            <img src="img/adn.png" data-desc="ADN anudado" alt="">
+            <img src="img/celta.png" data-desc="Nudo celta" alt="">
+            <img src="img/enlace.png" data-desc="Enlace de nudos" alt="">
+            <img src="img/equi.png" data-desc="Equivalencia de nudos" alt="">
+            <img src="img/equi2.png" data-desc="Equivalenciá" alt="">
+            <img src="img/primo.png" data-desc="Nudo primo" alt="">
+            <img src="img/heracles.png" data-desc="Nudo de Heracles" alt="">
+            <img src="img/marinero.png" data-desc="Nudo marinero" alt="">
+            <img src="img/mizuhiki.png" data-desc="Mizuhiki" alt="">
+            <img src="img/nudo_chino.png" data-desc="Nudo chino" alt="">
+            <img src="img/toro.png" data-desc="Nudo toroidal" alt="">
+            <img src="img/trivial.png" data-desc="Nudo trivial" alt="">
+            <img src="img/tyet.png" data-desc="Nudo Tyet" alt="">
+            <img src="img/sinfin.png" data-desc="Nudo sin fin" alt="">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Propósito institucional</h2>
+        <p>El Departamento de Matemáticas de la Universidad de Guadalajara promueve la enseñanza, divulgación e investigación de las matemáticas aplicadas y puras. Este documento web refleja el compromiso académico con la exactitud, la historia y la exploración de conceptos topológicos como los nudos.</p>
+      </section>
+
+      <section>
+        <h2>Explora más</h2>
+        <ul>
+          <li><a href="historia.html">Historia de los nudos y su simbolismo</a></li>
+          <li><a href="conceptos.html">Clasificación y teoría de nudos</a></li>
+          <li><a href="bibliografia.html">Referencias académicas</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="udg-footer">
+      <div class="footer-top">
+        <img src="img/logo.png" alt="Logo Universidad de Guadalajara">
+        <div>
+          <strong>UNIVERSIDAD DE GUADALAJARA</strong><br>
+          CENTRO UNIVERSITARIO DE CIENCIAS EXACTAS E INGENIERÍAS<br>
+          Blvd. Marcelino García Barragán #1421, esq Calzada Olímpica, C.P. 44430, Guadalajara, Jalisco, México.<br>
+          <strong>Teléfono: +52 33 1378 5900.</strong>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        Derechos reservados ©1997 - 2025. Universidad de Guadalajara.
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal de imagen -->
+  <div id="imgModal" class="img-modal" aria-hidden="true">
+    <div class="img-modal-content">
+      <button class="close-btn" id="closeModal">&times;</button>
+      <img id="modalImg" src="" alt="">
+      <h3 id="modalTitle"></h3>
+      <p id="modalInfo"></p>
+    </div>
+  </div>
+
+  <!-- Script menú hamburguesa -->
+  <script>
+    const hambBtn = document.getElementById('hambBtn');
+    const overlayMenu = document.getElementById('overlayMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    hambBtn.addEventListener('click', () => overlayMenu.style.display = 'block');
+    closeMenu.addEventListener('click', () => overlayMenu.style.display = 'none');
+    window.addEventListener('click', (e) => { if(e.target === overlayMenu) overlayMenu.style.display = 'none'; });
+  </script>
+
+  <!-- Script para duplicar imágenes y lograr scroll continuo -->
+  <script>
+    const track = document.getElementById('turingTrack');
+    const images = Array.from(track.children);
+    images.forEach(img => {
+      const clone = img.cloneNode(true);
+      track.appendChild(clone);
+    });
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
